@@ -9,9 +9,17 @@ object AnyTest {
   }
 
   def main(args: Array[String]): Unit = {
+    // 泛型函数
     echo(12,"类型 T")
     echo("flyWay", true)
 
+    // 泛型类
+    val m1 = new Message[String]("Hello")
+    val m2 = new Message(12)
+    println(m1.is("h"))
+    println(m1.is("Hello"))
+    println(m2.is(23))
+    println(m2.is(12))
   }
 
 }
