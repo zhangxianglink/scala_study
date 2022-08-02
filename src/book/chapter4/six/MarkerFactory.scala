@@ -30,7 +30,7 @@ object Marker {
     "yellow" -> new Marker("yellow")
   )
 
-  new Marker("test") test
+  new Marker("test").test
 
   // 静态方法
   def getRoll: Iterable[String] = map.keys
@@ -71,7 +71,7 @@ object test {
     println(Marker getInstance "red")
     println(Marker getInstance "green")
 
-    println(Marker getRoll)
+    println(Marker.getRoll)
 
     Marker.apply("简化new1")
     Marker("简化new2")

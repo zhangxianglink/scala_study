@@ -7,10 +7,32 @@ package book.chapter5.four
  */
 object CollectionTest {
 
+  def copyPet[S , P >: S](son: Array[S], parent: Array[P]): Unit = {
+    for (p <- parent){
+      println(p)
+    }
+    println(" ----- 转化 ------")
+    for ( i <- 0 to (son.length -1) ){
+      val s = son.apply(i)
+      if(s.isInstanceOf[P]){
+        var pet: P = son.apply(i).asInstanceOf[P]
+        parent.update(i, pet)
+      }
+    }
+
+    for (p <- parent){
+      println(p)
+    }
+  }
+
   def main(args: Array[String]): Unit = {
     val cats = Array(new Cat("mark"), new Cat("lucy"))
 //      协变失败  new Cat("a") usePet(cats)
-    new Cat("b") usePet2(cats)
+//    new Cat("b") usePet2(cats)
+
+    val pets = Array(new Pet("a"), new Pet("b"))
+
+    copyPet(cats, pets)
   }
 
 }
