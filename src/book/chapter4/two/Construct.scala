@@ -43,6 +43,7 @@ object test {
     val construct = new Construct("a", "b")
     println(construct)
 
+    // 和java 自定义构造函数差不多
     val construct2 = new Construct("a", "b","c")
     println(construct2)
   }

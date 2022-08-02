@@ -16,6 +16,8 @@ class station(val price: Int, val date: Long){
 class subwayStation(override val price: Int, override val date: Long, val ticketOffice : String)
   // 类似super
   extends station(price,date) {
+
+
   override def toString  = {
     s"$price , $date, $ticketOffice"
   }
