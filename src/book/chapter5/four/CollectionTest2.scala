@@ -17,7 +17,7 @@ object CollectionTest2 {
         val C = new tmp3[Parent](new Parent)
         val D:tmp3[Son] = C
 
-        val E = new tmp2[Son](new Parent)
+        val E = new tmp2[Son](new Son)
         val F:tmp2[Parent] = E
     }
 
