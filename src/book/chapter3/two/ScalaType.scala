@@ -88,7 +88,7 @@ object StringValue {
   def main(args: Array[String]): Unit = {
     println(s"how much the subway ticket? ${price / 2}")
     println(s"how much the subway ticket? $$${price * {num - 0.52}}" )
-    println(f"how much the subway ticket? $$${price / {num - 0.52}}%2.2f" )
+    println(f"how much the subway ticket? $$${price / {num - 0.52}}%2.3f" )
 
   }
 }

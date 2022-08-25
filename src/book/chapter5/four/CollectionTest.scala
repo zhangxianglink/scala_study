@@ -43,8 +43,8 @@ object CollectionTest {
     }
   }
 
-  def usePet4[T >: Randall <: Cat](pet: Array[T]): Unit = {
-    println(s"上下界: $pet")
+  def usePet4[T >: Randall <: Cat](pets: Array[T]): Unit = {
+    println(s"上下界: ${pets.apply(0)}")
   }
 
   def main(args: Array[String]): Unit = {
@@ -57,10 +57,11 @@ object CollectionTest {
     // 逆变失败 usePet3(Array(new WhiteRandall("this is a pet")))
 
     // 上下界同时存在
-    usePet4(Array(new WhiteRandall("边界外布偶猫")))
+
     usePet4(Array(new Randall("布偶猫")))
-    usePet4(Array(new Pet("动物")))
     usePet4(Array(new Cat("猫")))
+//    usePet4(Array(new Pet("动物")))
+//    usePet4(Array(new WhiteRandall("边界外布偶猫")))
 
 
     val pets = Array(new Pet("a"), new Pet("b"))
@@ -74,13 +75,16 @@ class Pet(val name: String) {
 }
 
 class Cat(override val name: String) extends Pet(name: String){
+  override def toString: String = name
   def usePet(pets: Array[Pet]): Unit ={
     println(s"${pets apply(1)}")
   }
 }
 
 class Randall(override val name: String) extends Cat(name: String){
+  override def toString: String = name
 }
 
 class WhiteRandall(override val name: String) extends Randall(name: String){
+  override def toString: String = name
 }

@@ -8,7 +8,9 @@ object MyEnum extends Enumeration {
 }
 
 object MyEnum2 extends Enumeration(11) {
+  type MyEnum2 = Value
   val CNY, USD, JPY, PLN,INR = Value
+  val OTHERS = Value(20,"其他货币")
 }
 
 object MyEnum3 extends Enumeration {

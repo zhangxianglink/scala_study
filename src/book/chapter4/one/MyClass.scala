@@ -1,7 +1,7 @@
 package book.chapter4.one
 
 /**
- *  scala 默认提供get/set ， 构造器就是类本身， Scala 会执行主构造器中任意表达式和直接内置在类定义中的可执行语句。我
+ * scala 默认提供get/set ， 构造器就是类本身， Scala 会执行主构造器中任意表达式和直接内置在类定义中的可执行语句。我
  *
  * @param year
  */
@@ -14,7 +14,7 @@ class MyClass(val year: Int) {
   }
 
   override def toString: String = {
-    s"""
+    s""" toString:
        | year: $year
        | month: $month
        |""".stripMargin
@@ -27,6 +27,7 @@ object UseClass {
   def main(args: Array[String]): Unit = {
     val clazz = new MyClass(2022)
     clazz.day = 29
+    println(clazz.day)
     println(clazz.year)
     println(clazz.toString)
   }
