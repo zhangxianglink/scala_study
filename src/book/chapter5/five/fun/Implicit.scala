@@ -1,6 +1,6 @@
-package book.chapter5.five
+package book.chapter5.five.fun
 
-import book.chapter5.five.DateHelper.{ago, convertIntToDateHelper, from_now}
+import book.chapter5.five.fun.DateHelper.{ago, from_now ,convertIntToDateHelper}
 
 object Implicit {
 

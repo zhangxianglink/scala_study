@@ -1,4 +1,4 @@
-package book.chapter5.five
+package book.chapter5.five.fun
 
 import java.time.LocalDate
 import scala.language.implicitConversions
