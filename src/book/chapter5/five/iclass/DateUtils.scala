@@ -6,7 +6,7 @@ object DateUtils {
   val ago = "ago"
   val from_now = "from_now"
 
-  implicit class DateHelper(val offset: Int) {
+  implicit class DateHelper(val offset: Int) extends AnyVal {
     import java.time.LocalDate
     def time(when: String) : LocalDate = {
       val date = LocalDate.now()
