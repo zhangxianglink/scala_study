@@ -13,6 +13,9 @@ object DefTest4 {
 
   def main(args: Array[String]): Unit = {
     var result = 1
+    val add = {e:Int => result *= e}
+    loopPipe(5)(add)
+
     loopPipe(5){
       e => result *= e
       println(s"闭包loop: ${e}  result: ${result}")

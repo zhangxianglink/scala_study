@@ -19,9 +19,14 @@ object CollectionTest2 {
 
         val E = new tmp2[Son](new Son)
         val F:tmp2[Parent] = E
+
+        test(C,E)
     }
 
-
+    def test[K,T](k: K, t: T): Unit ={
+        println(k.getClass)
+        println(t.getClass)
+    }
 }
 
 class Parent

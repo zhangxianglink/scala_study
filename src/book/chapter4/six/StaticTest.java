@@ -8,6 +8,15 @@ public class StaticTest {
     private static String name = "wink";
 
     private String a;
+
+    @Override
+    public String toString() {
+        return "StaticTest{" +
+                "a='" + a + '\'' +
+                ", b='" + b + '\'' +
+                '}';
+    }
+
     private String b;
 
     public StaticTest(String a, String b) {

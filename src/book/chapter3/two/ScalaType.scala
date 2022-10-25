@@ -58,7 +58,7 @@ object DefaultValues {
   }
 
   def main(args: Array[String]): Unit = {
-    getUserInfo(name = "mark")
+
     getUserInfo(sport = "video game")
   }
 
@@ -101,7 +101,7 @@ object StringValue {
 
 
 class Add(val x: Int, val y: Int){
-  def +(add: Add) ={
+  def j(add: Add) ={
     new Add(x + add.x, y + add.y)
   }
 
@@ -113,7 +113,7 @@ class Add(val x: Int, val y: Int){
 object AddTest {
    val add1 = new Add(1, 9)
    val add2 = new Add(-8, 5)
-   val add3 = add1 + add2
+   val add3 = add1 j add2
 
   def main(args: Array[String]): Unit = {
     println(s"$add1 | $add2 | $add3")

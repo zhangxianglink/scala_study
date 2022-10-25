@@ -10,8 +10,8 @@ class Construct (val firstName: String, val lastName: String){
 
 
   /**
-   * var => private 字段 带有get/set
-   * val => private final
+   * var => private 字段 get/set
+   * val => private final  get
    * Scala要求变量在使用前必须初始化 _ 等同于默认值。
     */
   var level: String = _

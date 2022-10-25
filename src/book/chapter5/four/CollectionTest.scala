@@ -19,11 +19,10 @@ object CollectionTest {
     for ( i <- 0 to (son.length -1) ){
       val s = son.apply(i)
       if(s.isInstanceOf[P]){
-        var pet: P = son.apply(i).asInstanceOf[P]
+        val pet: P = s.asInstanceOf[P]
         parent.update(i, pet)
       }
     }
-
     for (p <- parent){
       println(p)
     }
@@ -66,7 +65,9 @@ object CollectionTest {
 
     val pets = Array(new Pet("a"), new Pet("b"))
     copyPet(cats, pets)
+
   }
+
 
 }
 

@@ -17,7 +17,7 @@ object str{
     val split = "-";
     print( "字符串的拼接不需要 + ：")
     for (i <- 1 to 3){
-      print(s"$i  $split")
+      println(s"$i  $split")
     }
   }
   // to 是函数，没有参数/一个参数 可以省略 . ()

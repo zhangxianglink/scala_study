@@ -33,12 +33,13 @@ object DefTest1 {
   def main(args: Array[String]): Unit = {
     println(sum(10))
     println(sum2(10, e => e*2))
+    println("a" + sum2(10, e => if (e % 2 == 0 ) e else  0) )
 
     val arr = Array(1, 2, 8, -1, 6, 9, 2)
     val i = more(arr, 0, (a, b) => Math.max(a,b))
     println(i)
     // 官方实现
-    val i1 = arr.foldLeft(Integer.MAX_VALUE) {
+    val i1 = arr.foldRight(Integer.MAX_VALUE) {
       (x, y) => Math.min(x, y)
     }
     println(i1)

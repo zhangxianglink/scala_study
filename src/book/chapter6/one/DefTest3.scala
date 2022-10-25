@@ -16,9 +16,17 @@ object DefTest3 {
     stringToUnit("m5")
     stringToUnit("m6")
 
+    val log2use = log2(date, _: Int)
+    log2use(1)
+    log2use(2)
+    log2use(3)
   }
 
   def log(date: LocalDate, msg: String): Unit ={
     println(s" $date , $msg")
+  }
+
+  def log2(date: LocalDate, num: Int) = {
+    println(s" $date , $num")
   }
 }

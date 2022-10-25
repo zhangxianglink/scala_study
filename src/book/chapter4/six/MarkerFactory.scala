@@ -41,7 +41,7 @@ object Marker {
 
   // 简化new
   def apply(color: String) ={
-    map getOrElse (color,new Marker(color))
+    map getOrElseUpdate (color, op = new Marker(color))
   }
 }
 
@@ -75,6 +75,7 @@ object test {
 
     Marker.apply("简化new1")
     Marker("简化new2")
+
 
   }
 }

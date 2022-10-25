@@ -6,6 +6,7 @@ package book.chapter4.one
  * @param year
  */
 class MyClass(val year: Int) {
+  val list = List(1,2,3,4)
   private var month: Int = 0
   var day = 0
   def getMonth: Int = month
@@ -14,10 +15,10 @@ class MyClass(val year: Int) {
   }
 
   override def toString: String = {
-    s""" toString:
-       | year: $year
-       | month: $month
-       |""".stripMargin
+    s"""toString:
+       |year: $year
+       |month: $month
+       |list: $list""".stripMargin
   }
 
   println("这是一条内置可执行语句，构造调用执行")
